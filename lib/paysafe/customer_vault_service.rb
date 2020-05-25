@@ -102,8 +102,7 @@ module Paysafe
       uri: prepare_uri("/profiles/" + profile.id)
       )
 
-      response = @client.process_request request
-      CustomerVault::Profile::new response
+      @client.process_request request
     end
 
     ###########
